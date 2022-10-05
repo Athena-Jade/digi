@@ -1,0 +1,790 @@
+/* CSS GRID */
+.container {
+    max-width: 1200px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr 4fr 1fr;
+
+    /* nommer les zones */
+    grid-template-areas: "header""content""footer";
+}
+
+header {
+    background-color: rgb(125, 161, 149);
+    grid-area: header;
+}
+
+.content {
+    background-color: rgb(238, 234, 241);
+    grid-area: content;
+}
+
+.footer {
+    background-color: rgb(133, 61, 61);
+    grid-area: footer;
+}
+
+/****** fin CSS GRID *****/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #666;
+}
+
+header .logo i {
+    padding-right: .5rem;
+    color: var(--red);
+}
+
+header .navbar a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #666;
+}
+
+header .navbar a:hover {
+    color: rgb(174, 120, 129);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+
+/************  accueil *********/
+.content .accueil {
+    display: flex;
+}
+
+.content .accueil .img_accueil img {
+    width: 100%;
+    margin-top: 5rem;
+}
+
+.content .accueil .img_accueil {
+    flex: 1 1 50rem;
+}
+
+.content .accueil .texte_droite {
+    flex: 1 1 50rem;
+}
+
+
+.content .accueil .texte_droite p {
+    font-size: 2rem;
+    margin-top: 7rem;
+    margin-left: 1rem;
+}
+
+
+.content .accueil .texte_droite h2 {
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+
+.content .accueil .texte_droite .bouton_read h4 {
+    font-size: 2rem;
+    margin: 2rem;
+    background-color: rgb(174, 120, 129);
+    width: 15rem;
+    padding: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********** FOND ECRAN ************/
+.fond_ecran {
+    background-color: #e3d0d4;
+    margin-bottom: -1rem;
+    height: 60rem;
+}
+
+
+/* hosting solution */
+.hosting_title h2 {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.hosting_title p {
+    text-align: center;
+}
+
+
+.boxe_hosting_solution1,
+.boxe_hosting_solution2,
+.boxe_hosting_solution3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+.coding,
+.database,
+.friendly {
+   /* flex-basis: 15rem; */
+   flex:  0 1 15rem;
+    margin: 1rem 3%;
+}
+
+
+.boxe_hosting_solution1 .coding i {
+    color: rgb(174, 120, 129);
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 5rem;
+    padding: 1rem;
+}
+
+.boxe_hosting_solution1 .coding .code h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+.boxe_hosting_solution1 .coding .ssl h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+.boxe_hosting_solution2 .database i {
+    color: rgb(174, 120, 129);
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 5rem;
+    padding: 1rem;
+}
+
+
+.boxe_hosting_solution2 .storage h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+.boxe_hosting_solution2 .domain h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+.boxe_hosting_solution3 .friendly i {
+    color: rgb(174, 120, 129);
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 5rem;
+    padding: 1rem;
+}
+
+.boxe_hosting_solution3 .people h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+.boxe_hosting_solution3 .domain_transfert h3 {
+    color: rgb(174, 120, 129);
+    font-weight: bold;
+}
+
+
+
+/*********** HELP ************/
+.fond_ecran2 {
+    background-color: white;
+    height: 30rem;
+}
+
+.fond_ecran2 .help {
+    display: flex;
+    justify-content: center;
+}
+
+.fond_ecran2 .help .personnage {
+    background-color: rgb(174, 120, 129);
+    font-size: 1rem;
+    flex-basis: 25rem;
+    border-radius: 5%;
+    margin: 2rem;
+    padding: 1rem;
+}
+
+.fond_ecran2 .help .personnage h3 {
+    color: white;
+}
+
+
+.fond_ecran2 .help .personnage p {
+    font-size: 1rem;
+    color: white;
+}
+
+
+.fond_ecran2 .help .our_team {
+    background-color: white;
+    box-shadow: 10px 19px 36px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 19px 36px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 19px 36px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 5%;
+    flex-basis: 20rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+
+.fond_ecran2 .help .our_team p {
+    color: black;
+    font-size: 1rem;
+}
+
+.fond_ecran2 .help .personnage .fa-solid {
+    color: pink;
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.8rem;
+
+}
+
+/******** Powerful ********/
+.powerful .title_enjoy {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.powerful .title_enjoy h3 {
+    font-size: 3.5rem;
+    margin: 2rem auto;
+}
+
+.powerful .para1 {
+    text-align: center;
+    font-size: 1.50rem;
+    margin: 1rem 1%;
+}
+
+
+.powerful .rubrique {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.powerful .rubrique .fa-apple {
+    flex-basis: 15rem;
+    border: 1px solid rgb(174, 120, 129);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+
+.powerful .rubrique .fa-google-play {
+    flex-basis: 10rem;
+    background-color: rgb(174, 120, 129);
+    padding: 1rem;
+    color: white;
+    border-radius: .5rem;
+}
+
+
+
+/********** EMPLOYES **********/
+.boxe_employes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center;
+    height: 30vw;
+    margin: 8rem 9%;
+}
+
+/* taille images */
+.boxe_employes .employes .image_employe img {
+    width: 20rem;
+    position: absolute;
+    top: -26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5%;
+}
+
+.image_employe {
+    position: relative;
+}
+
+/* fond ecran mauve des images */
+.employes {
+    flex-basis: 20rem;
+    margin: 2rem auto;
+    background-color: rgb(174, 120, 129);
+    height: 40%;
+}
+
+.image_employe h3 {
+    font-size: 2rem;
+    position: relative;
+    top: 6rem;
+    left: 0rem;
+}
+
+
+.image_employe h4 {
+    font-size: 1rem;
+    position: relative;
+    top: 7rem;
+    left: 0rem;
+}
+
+.employe1,
+.employe2,
+.employe3 {
+    flex-grow: 1;
+}
+
+
+
+/************* fond ecran 3 ********/
+.fond_ecran3 {
+    background-color: white;
+    height: 35rem;
+}
+
+
+.fond_ecran3 .start_saving {
+    display: flex;
+    justify-content: center;
+
+}
+
+.start_saving .time {
+   /* flex-basis: 15rem; */
+   flex: 0 1 15rem;
+    margin: 4rem 1%;
+
+}
+
+/* logo cadenas */
+.start_saving .time i {
+    background-color: rgb(174, 120, 129);
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    padding: 0.9rem;
+    color: white;
+}
+
+/* safety payements provides by ... */
+.start_saving .time p {
+    margin: 0rem auto;
+}
+
+.start_saving .time h3 {
+    margin: 3rem auto;
+    font-size: 2rem;
+}
+
+
+.start_saving .solo {
+    flex: 0 1 15rem;
+    background-color: rgb(240, 232, 232);
+    width: 15rem;
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 4rem 1%;
+    
+}
+
+/* 74€ */
+.start_saving .solo .price h2 {
+    position: relative;
+    top: -2rem;
+    right: -10rem;
+}
+
+.start_saving .solo hr {
+    color: rgb(174, 120, 129);
+    font-weight: 700;
+    font-size: 3rem;
+    /* flex: 0 1 15rem;*/
+}
+
+.start_saving .solo .includes_solo {
+    margin: 2rem;
+   
+}
+
+
+
+.start_saving .solo .purchase_module h5 {
+    background-color: rgb(174, 120, 129);
+    padding: 1rem;
+    text-align: center;
+}
+
+
+.start_saving .team {
+    background-color: rgb(174, 120, 129);
+    width: 15rem;
+    border-radius: 5%;
+    padding: 1rem;
+    margin: 4rem 1%;
+    flex: 0 1 15rem;
+
+}
+
+/* 199€ */
+.start_saving .team .price h2 {
+    position: relative;
+    top: -2rem;
+    right: -9rem;
+}
+
+.start_saving .team hr {
+    color: rgb(240, 232, 232);
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+.start_saving .team .includes_team {
+    margin: 2rem;
+}
+
+.start_saving .team .purchase_module h5 {
+    background-color: rgb(245, 237, 237);
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/***************** FOND ECRAN 4 **************/
+.fond_ecran4 {
+    background-color: #e3d0d4;
+    height: 50rem;
+    margin-top: -2rem;
+}
+
+.get_in_touch {
+    display: flex;
+    justify-content: space-around;
+}
+
+.get_in_touch .touch {
+    flex-basis: 10rem;
+}
+
+.touch p .texte_gras {
+    font-weight: 700;
+
+}
+
+/* texte get in touch */
+.get_in_touch .touch h3 {
+    font-size: 1.85rem;
+    margin: 3rem;
+}
+
+.get_in_touch .infos {
+    margin: 3rem;
+}
+
+/* formulaire contact */
+form .box {
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.box {
+    width: 15rem;
+}
+
+form textarea #your_message {
+    width: 20rem;
+    font-size: 0.50rem;
+}
+
+form input {
+    font-size: 1rem;
+}
+
+form .btn {
+    background-color: rgb(174, 120, 129);
+    width: 8rem;
+    padding: 0.5rem;
+    border-radius: 5%;
+    margin: 1rem 25%;
+}
+
+
+
+/*********** FOOTER *********/
+.footer nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+/******************** MEDIAS QUERIES *****************/
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+
+}
+
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 50%;
+    }
+
+    #menu-bar {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        display: block;
+        border: .2rem solid rgba(0, 0, 0, .1);
+        border-left: .5rem solid rgb(174, 120, 129);;
+        background: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    /*** accueil****/
+    .content .accueil .img_accueil img{
+        margin-top: 7rem;
+    }
+    
+    .content .accueil .texte_droite h2 {
+        font-size: 2rem;
+        margin: 2rem;
+       
+    }
+
+
+    .content .accueil .texte_droite p {    
+        margin-top: 9rem;
+        font-size: 1.85rem;
+    }
+
+    .content .accueil .texte_droite .bouton_read h4 {
+        font-size: 1rem;
+        margin: 2rem;
+        width: 9rem;
+        padding: 1rem;
+    }
+
+    .content .accueil .img_accueil{
+        flex: 1 3 50rem;
+    }
+    .content .accueil .texte_droite{
+        flex: 1 3 50rem;
+    }
+
+
+
+
+
+
+    /*hosting solution with benefits */
+    .hosting_title h2 {
+        font-size: 1.85rem;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width:650px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    /* fond ecran mauve des photos*/
+    .employes {
+        height: 50%;
+        flex-basis: 25rem;
+    }
+
+}
+
+
+
+
+@media screen and (max-width:590px) {
+
+    /* reduire taille photo */
+    .boxe_employes .employes .image_employe img {
+        width: 16rem;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .powerful .title_enjoy h3 {
+        font-size: 2.5rem;
+    }
+
+
+    .employes {
+        height: 60%;
+
+    }
+
+    /* reduire taille photo */
+    .boxe_employes .employes .image_employe img {
+        width: 14rem;
+    }
+
+
+
+}
+
+@media screen and (max-width: 450px) {
+    .content .accueil .texte_droite p{
+        font-size: 1.45rem;
+    }
+
+    .content .accueil .texte_droite h2{
+        font-size: 1.70rem;
+    }
+}
+
+
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 35%;
+    }
+
+    /* reduire taille photo */
+    .boxe_employes .employes .image_employe img {
+        width: 12rem;
+    }
+
+    .employes {
+        height: 70%;
+
+    }
+
+}
